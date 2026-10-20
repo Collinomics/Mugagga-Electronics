@@ -1,0 +1,19 @@
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local secrets and generated output
+.env
+.env.*
+!.env.example
+*.log
+dist/
+build/
+node_modules/
+*.zip
+*.tar
+*.tgz
+*.bak
+*.tmp
