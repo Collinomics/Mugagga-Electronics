@@ -87,6 +87,7 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navMenu.classList.contains('open')) {
         closeMenu();
+        hamburger.focus();
       }
     });
   }
