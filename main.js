@@ -243,18 +243,13 @@
         return;
       }
 
-      // Disable button during submission
-      var originalText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
-
-      // Simulate async submission
-      setTimeout(function () {
-        showAlert('Thank you! Your message has been sent. We will get back to you shortly.', 'success');
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }, 1500);
+      // This static website has no message-delivery backend.
+      // Never claim a message was delivered when nothing was sent.
+      showAlert(
+        'This demo form cannot send messages yet. Please contact Mugagga Electronics using the phone or email details on this page.',
+        'error'
+      );
+      if (submitBtn) submitBtn.disabled = false;
     });
   }
 
